@@ -1,0 +1,8 @@
+name: CustomSoundManagerAPI
+main: com.AustinPilz.CustomSoundManagerAPI.CustomSoundManagerAPI
+version: ${project.version}
+description: Custom Sound Manager
+author: Austin Pilz
+website: http://austinpilz.com
+load: POSTWORLD
+
