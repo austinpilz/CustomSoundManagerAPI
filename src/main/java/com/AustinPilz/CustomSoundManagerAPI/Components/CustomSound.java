@@ -40,6 +40,48 @@ public class CustomSound {
     }
 
     /**
+     * Returns the location at which the sound plays
+     * @return
+     */
+    public Location getLocation()
+    {
+        return location;
+    }
+
+    /**
+     * Returns the resource pack value of the sound
+     * @return
+     */
+    public String getResourcePackValue()
+    {
+        return resourcePackValue;
+    }
+
+    /**
+     * Returns the number of seconds left for the sound to play
+     * @return
+     */
+    public int getTimeLeftSeconds()
+    {
+        return timeLeftSeconds;
+    }
+
+    /**
+     * Sets the number of seconds left for the sound to play
+     * @param seconds
+     */
+    public void setTimeLeftSeconds(int seconds) { timeLeftSeconds = seconds; }
+
+    /**
+     * Returns the volume for the sound
+     * @return
+     */
+    public int getVolume()
+    {
+        return volume;
+    }
+
+    /**
      * Begins playback of the sound for the player
      */
     public void play()

@@ -13,7 +13,7 @@ public class PlayerSoundAPI {
      */
     public static boolean isSoundCurrentlyPlayingForPlayer(Player player)
     {
-        return CustomSoundManagerAPI.playerController.getPlayerSoundManager(player).isSoundCurrentlyPlaying();
+        return CustomSoundManagerAPI.playerController.getPlayerSoundManager(player).areAnySoundsPlaying();
     }
 
     public static SoundManager getPlayerSoundManager(Player player)
