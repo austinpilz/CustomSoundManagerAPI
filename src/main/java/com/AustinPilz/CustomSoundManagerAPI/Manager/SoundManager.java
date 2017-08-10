@@ -25,12 +25,19 @@ public class SoundManager {
      * @param lengthInSeconds Length in seconds of the sound
      * @param volume Volume of the sound
      * @param interruptCurrent Interrupt currently playing sound, if any
+     * @param overlayCurrent Overlay sound on top of any currently playing sounds
      */
-    public void playCustomSound(Location location, String resourcePackValue, int lengthInSeconds, int volume, boolean interruptCurrent)
+    public void playCustomSound(Location location, String resourcePackValue, int lengthInSeconds, int volume, boolean interruptCurrent, boolean overlayCurrent)
     {
         //Check to see if they have another sound already playing
-        if (!isSoundCurrentlyPlaying() || (isSoundCurrentlyPlaying() && interruptCurrent))
+        if (!isSoundCurrentlyPlaying() || (isSoundCurrentlyPlaying() && interruptCurrent) || (isSoundCurrentlyPlaying() && overlayCurrent))
         {
+            //Interrupt current sounds if there is one and we're told to do so
+            if (isSoundCurrentlyPlaying() && interruptCurrent)
+            {
+                stopAllSounds();
+            }
+
             //There's no sound playing OR there's a sound already playing, but we were told to interrupt the sound.
             CustomSound sound = new CustomSound(this, player, location, resourcePackValue, lengthInSeconds, volume);
             sound.play();
