@@ -156,7 +156,11 @@ public class SoundManager {
         while (it.hasNext())
         {
             CustomSound sound = (CustomSound) it.next();
-            sound.setTimeLeftSeconds(secondsLeft);
+
+            if (sound.getTimeLeftSeconds() > secondsLeft)
+            {
+                sound.setTimeLeftSeconds(secondsLeft);
+            }
         }
     }
 }

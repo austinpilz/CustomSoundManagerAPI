@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class CustomSoundManagerAPI extends JavaPlugin {
     public static final String pluginName = "Custom Sound Manager API";
-    public static final String pluginVersion = "1.0";
+    public static final String pluginVersion = "1.1";
     public static final String consolePrefix = "[CustomSoundManagerAPI] ";
 
     public static final Logger log = Logger.getLogger("Minecraft");
